@@ -53,7 +53,7 @@ public class MainController implements Initializable {
     @FXML
     private Label sumLabel;
     @FXML
-    private TextField apText;
+    private TextField apMainText;
     @FXML
     private TextField minText;
     @FXML
@@ -125,10 +125,10 @@ public class MainController implements Initializable {
     }
     @FXML
     private void onClickShow(){
-        if(!apText.getText().equals("") && minText.getText().equals("") && maxText.getText().equals("")){
-            refreshTableByApt(Integer.parseInt(apText.getText()));
-        } else if (!apText.getText().equals("") && !minText.getText().equals("") && !maxText.getText().equals("")) {
-            refreshTableInRange(Integer.parseInt(apText.getText()), Integer.parseInt(minText.getText()), Integer.parseInt(maxText.getText()));
+        if(!apMainText.getText().equals("") && minText.getText().equals("") && maxText.getText().equals("")){
+            refreshTableByApt(Integer.parseInt(apMainText.getText()));
+        } else if (!apMainText.getText().equals("") && !minText.getText().equals("") && !maxText.getText().equals("")) {
+            refreshTableInRange(Integer.parseInt(apMainText.getText()), Integer.parseInt(minText.getText()), Integer.parseInt(maxText.getText()));
         } else {
             refreshTable();
         }
