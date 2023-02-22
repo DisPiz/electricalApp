@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!--
+        <appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+            <smtpHost>smtp.gmail.com</smtpHost>
+            <smtpPort>587</smtpPort>
+            <STARTTLS>true</STARTTLS>
+            <asynchronousSending>false</asynchronousSending>
+            <username>login</username>
+            <password>pass</password>
+            <to>to</to>
+            <from>user</from>
+            <subject>%logger{20} - %msg</subject>
+            <layout class="ch.qos.logback.classic.html.HTMLLayout"/>
+        </appender>
+        -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <File name="FileAppender" fileName="application-${date:yyyyMMdd}.log" immediateFlush="false" append="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>

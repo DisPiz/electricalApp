@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="addAppliance" prefHeight="355.0" prefWidth="243.0" stylesheets="css/main.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lukashchuk.appll.controller.AddApplianceController">
+   <children>
+      <ComboBox fx:id="typeCombo" layoutX="45.0" layoutY="46.0" prefWidth="150.0" promptText="default" stylesheets="css/main.css" />
+      <Label layoutX="45.0" layoutY="78.0" text="Назва приладу" />
+      <Label layoutX="43.0" layoutY="125.0" text="Виробник" />
+      <Label layoutX="41.0" layoutY="169.0" text="Споживання (w)" />
+      <Label layoutX="45.0" layoutY="214.0" text="Квартира" />
+      <Label fx:id="optionalLabel" layoutX="43.0" layoutY="258.0" text="Літраж" visible="false" />
+      <TextField fx:id="nameText" layoutX="46.0" layoutY="96.0" />
+      <TextField fx:id="manuText" layoutX="46.0" layoutY="143.0" />
+      <TextField fx:id="powerText" layoutX="47.0" layoutY="185.0" />
+      <TextField fx:id="apText" layoutX="47.0" layoutY="232.0" />
+      <TextField fx:id="optText" layoutX="46.0" layoutY="280.0" visible="false" />
+      <Label layoutX="45.0" layoutY="22.0" text="Тип приладу" />
+      <Button fx:id="createBtn" layoutX="30.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#addApplianceBtn" prefHeight="26.0" prefWidth="82.0" text="Створити" />
+      <Button fx:id="clearBtn" layoutX="131.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#clearAllFields" prefHeight="26.0" prefWidth="82.0" text="Очистити" />
+      <Button fx:id="okBtn" layoutX="197.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#okBtnClick" prefHeight="26.0" prefWidth="36.0" text="OK" />
+   </children>
+</AnchorPane>
